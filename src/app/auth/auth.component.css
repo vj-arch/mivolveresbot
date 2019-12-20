@@ -1,0 +1,119 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+.leftSideMainSectionLoginPage {
+  background-color: #f2f2f2;
+  min-height: 100vh;
+}
+.leftSideSectionLoginPage {
+  margin: auto;
+  padding-top: 9%;
+  /* align-self: center; padding: 9%;*/
+  /* align-items: center; */
+  text-align: center;
+  color: #727272;
+}
+.leftSideSectionLoginPage-graphImage img {
+  width: 80%;
+}
+.logoSection {
+  height: auto;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.logoSection img {
+  width: 32px;
+  display: inline-block;
+  height: 32px;
+}
+.logoSection p {
+  display: inline-block;
+  margin: 0 0 0 10px;
+  color: #727272;
+  font-weight: 600;
+  font-size: 21px;
+}
+.leftSideSectionLoginPage-BottomText {
+  font-weight: 600;
+  /* justify-content: center; */
+  /* width: 370px; */
+  width: 68%;
+  align-self: center;
+  margin: auto;
+}
+
+.rightSideSectionLoginPage {
+  color: #727272;
+}
+.formSection {
+  margin: auto;
+  padding: 10%;
+  padding-top: 27%;
+  width: 100%;
+}
+
+.formSection p {
+  font-weight: 500;
+}
+input {
+  width: 50%;
+}
+label {
+  font-size: 12px;
+}
+
+.formSectionBottomText {
+  display: flex;
+  font-size: 10px;
+}
+.termsclass {
+  font-size: 10px;
+}
+nz-form-item {
+  margin-bottom: 15px;
+}
+.loginButton {
+  height: 29px;
+  width: 142px;
+  background-color: #f2f2f2;
+  color: #727272;
+  border: none;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+.formSectionSearchInputFeild {
+  width: 50%;
+}
+.formSectionSearchInputFeild input {
+  width: 100%;
+}
+.formSectionSearchInputFeildSuffix {
+  right: 10px;
+}
+.mobileFormSection {
+  text-align: left;
+  margin: auto;
+
+  padding: 15px;
+  width: 100%;
+  margin-bottom: 10px;
+}
+.mobileFormSection input {
+  width: 100%;
+}
+.mobileFormSearchInputFeild input {
+  width: 100%;
+}
+.mobilSideSectionLoginPage-BottomText {
+  font-weight: 400;
+  /* justify-content: center; */
+  /* width: 370px; */
+  padding: 10px;
+  align-self: center;
+  margin: auto;
+}

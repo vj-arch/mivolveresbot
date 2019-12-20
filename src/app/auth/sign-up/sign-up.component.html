@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Resebot Login</title>
+  </head>
+  <body>
+    <div nz-row fxShow="true" fxHide.xs="true">
+      <div class="leftSideMainSectionLoginPage" nz-col nzSpan="14">
+        <div class="leftSideSectionLoginPage">
+          <!--This section has margin auto-->
+          <div class="logoSection">
+            <img src="../../assets/logo.png" alt="" />
+            <p>RESEBOT</p>
+          </div>
+          <div class="leftSideSectionLoginPage-graphImage">
+            <img src="../../assets/2019-12-16.png" alt="" />
+          </div>
+          <div>
+            <p class="leftSideSectionLoginPage-BottomText">
+              Know the Sustainable Development Goals(SDG's) of your Case Studies
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!--Left side section Ends & Right Side Section of Login Starts-->
+      <div nz-col nzSpan="10">
+        <div class="rightSideSectionLoginPage">
+          <form nz-form [nzLayout]="vert" class="formSection">
+            <!--Sign Up Form Starts-->
+            <p>Sign Up</p>
+
+            <nz-form-item>
+              <label>University</label>
+              <nz-form-control nzErrorTip="Please enter University">
+                <nz-input-group
+                  class="formSectionSearchInputFeild"
+                  [nzSuffix]="suffixIconSearch"
+                >
+                  <input
+                    type="text"
+                    [nzSize]="small"
+                    nz-input
+                    [(ngModel)]="searchText"
+                    placeholder="University Of Leicester"
+                  />
+                </nz-input-group>
+                <ng-template
+                  class="formSectionSearchInputFeildSuffix"
+                  #suffixIconSearch
+                >
+                  <i nz-icon nzType="search"></i>
+                </ng-template>
+                <ul>
+                  <li *ngFor="let c of universityData">
+                    {{ c }}
+                  </li>
+                </ul>
+              </nz-form-control>
+            </nz-form-item>
+
+            <nz-form-item>
+              <label>University Email ID</label>
+              <nz-form-control nzErrorTip="Please input your emailId!">
+                <input
+                  nz-input
+                  placeholder="john.nester@leicester.com"
+                  [nzSize]="small"
+                />
+              </nz-form-control>
+            </nz-form-item>
+            <nz-form-item>
+              <label>Password</label>
+              <nz-form-control nzErrorTip="Please input your username!">
+                <input
+                  nz-input
+                  type="password"
+                  placeholder="eg., ********"
+                  [nzSize]="small"
+                />
+              </nz-form-control>
+            </nz-form-item>
+            <nz-form-item>
+              <nz-form-control>
+                <label nz-checkbox class="termsclass"
+                  >I agree to "Terms and Conditions"</label
+                >
+              </nz-form-control>
+            </nz-form-item>
+            <button class="loginButton" nz-button>
+              SIGNUP
+            </button>
+            <div class="formSectionBottomText">
+              <p>Already Have an Account?</p>
+              <a routerLink="/login">Sign In</a>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!--Mobile View for the Login Section-->
+
+    <div nz-row fxShow.xs="true" fxHide.sm="true" fxHide.lg="true">
+      <div class="mobileMainSectionLoginPage" nz-col nzSpan="24">
+        <div class="leftSideSectionLoginPage">
+          <!--This section has margin auto-->
+          <div class="logoSection">
+            <img src="../../assets/logo.png" alt="" />
+            <p>RESEBOT</p>
+          </div>
+          <div class="MobileSideSectionLoginPage-graphImage">
+            <!--Mobile Form Section-->
+
+            <form nz-form class="mobileFormSection">
+              <!--Sign Up Form Starts-->
+              <p>Sign Up</p>
+
+              <nz-form-item>
+                <label>University</label>
+                <nz-form-control nzErrorTip="Please enter University">
+                  <nz-input-group
+                    class="mobileFormSearchInputFeild"
+                    [nzSuffix]="suffixIconSearch"
+                  >
+                    <input
+                      type="text"
+                      [nzSize]="medium"
+                      nz-input
+                      placeholder="University Of Leicester"
+                    />
+                  </nz-input-group>
+                  <ng-template
+                    class="mobileSectionSearchInputFeildSuffix"
+                    #suffixIconSearch
+                  >
+                    <i nz-icon nzType="search"></i>
+                  </ng-template>
+                </nz-form-control>
+              </nz-form-item>
+
+              <nz-form-item>
+                <label>University Email ID</label>
+                <nz-form-control nzErrorTip="Please input your emailId!">
+                  <input
+                    nz-input
+                    placeholder="john.nester@leicester.com"
+                    [nzSize]="small"
+                  />
+                </nz-form-control>
+              </nz-form-item>
+              <nz-form-item>
+                <label>Password</label>
+                <nz-form-control nzErrorTip="Please input your username!">
+                  <input
+                    nz-input
+                    type="password"
+                    placeholder="eg., ********"
+                    [nzSize]="small"
+                  />
+                </nz-form-control>
+              </nz-form-item>
+              <nz-form-item>
+                <nz-form-control>
+                  <label nz-checkbox class="termsclass"
+                    >I agree to "Terms and Conditions"</label
+                  >
+                </nz-form-control>
+              </nz-form-item>
+              <button class="loginButton" nz-button>
+                SIGNUP
+              </button>
+              <div class="formSectionBottomText">
+                <p>Already Have an Account?</p>
+                <a routerLink="/login">Sign In</a>
+              </div>
+            </form>
+          </div>
+          <div>
+            <p class="mobilSideSectionLoginPage-BottomText">
+              Know the Sustainable Development Goals(SDG's) of your Case Studies
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- <a routerLink="/home">Welcome</a> -->
+  </body>
+</html>

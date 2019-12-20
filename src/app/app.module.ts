@@ -10,11 +10,17 @@ import { HttpClientModule } from "@angular/common/http";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { registerLocaleData } from "@angular/common";
 import en from "@angular/common/locales/en";
+import { DashboardComponent } from './shared/dashboard/dashboard.component';
+import { CasestudyListCardComponent } from './shared/casestudy-list-card/casestudy-list-card.component';
+import { CasestudyListTableComponent } from './shared/casestudy-list-table/casestudy-list-table.component';
+import { CasestudyDetailComponent } from './shared/casestudy-detail/casestudy-detail.component';
+import { CasestudyAddComponent } from './shared/casestudy-add/casestudy-add.component';
+import { CasestudyEditComponent } from './shared/casestudy-edit/casestudy-edit.component';
 
 registerLocaleData(en);
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, DashboardComponent, CasestudyListCardComponent, CasestudyListTableComponent, CasestudyDetailComponent, CasestudyAddComponent, CasestudyEditComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
