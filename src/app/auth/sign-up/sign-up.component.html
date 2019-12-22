@@ -33,34 +33,57 @@
             <!--Sign Up Form Starts-->
             <p>Sign Up</p>
 
-            <nz-form-item>
+            
+<!----------------------------------------------------------------------------->
+<nz-form-item>
+  <label>University</label>
+<nz-select
+      
+      [(ngModel)]="searchText"
+      nzPlaceHolder="University Of Leicester"
+      [nzAllowClear]="true"
+      nzShowSearch
+      name="searchText"
+      
+      
+      [nzSuffixIcon]="suffixIconSearch"
+    >
+      <nz-option *ngFor="let o of universityNames[0] | filter : searchText" [nzValue]="o" [nzLabel]="o"></nz-option>
+      <nz-option *ngIf="displayTips" nzDisabled nzCustomContent>
+        Type University Name to Search
+      </nz-option>
+    </nz-select>
+    <ng-template
+    class="formSectionSearchInputFeildSuffix"
+    #suffixIconSearch
+  >
+    <i nz-icon nzType="search"></i>
+  </ng-template>
+  </nz-form-item>
+
+                <!----------------------------------------------------------------------------->
+           <!--    <nz-form-item>
               <label>University</label>
-              <nz-form-control nzErrorTip="Please enter University">
-                <nz-input-group
+              <nz-form-control nzErrorTip="Please enter University"> <nz-input-group
                   class="formSectionSearchInputFeild"
                   [nzSuffix]="suffixIconSearch"
                 >
                   <input
-                    type="text"
-                    [nzSize]="small"
-                    nz-input
-                    [(ngModel)]="searchText"
+                   nz-input
+                   [nzSize]="small"
+                  type="text" [(ngModel)]="searchText" name="searchText"
                     placeholder="University Of Leicester"
                   />
                 </nz-input-group>
-                <ng-template
-                  class="formSectionSearchInputFeildSuffix"
-                  #suffixIconSearch
-                >
-                  <i nz-icon nzType="search"></i>
-                </ng-template>
+               
+          
                 <ul>
-                  <li *ngFor="let c of universityData">
+                  <li *ngFor="let c of universityNames[0] | filter : searchText">
                     {{ c }}
                   </li>
                 </ul>
               </nz-form-control>
-            </nz-form-item>
+            </nz-form-item>-->
 
             <nz-form-item>
               <label>University Email ID</label>
